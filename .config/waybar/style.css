@@ -1,0 +1,69 @@
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    font-size: 10px;
+    min-height: 10px;
+    color: #ffffff;
+}
+
+@import "theme.css";
+
+window#waybar {
+    background: @bar-bg;
+}
+
+tooltip {
+    background: @main-bg;
+    color: @main-fg;
+    border-radius: 7px;
+    border-width: 0px;
+}
+
+#workspaces {
+ margin-left: 10px;
+}
+
+#workspaces button {
+    padding: 0px;
+}
+
+#workspaces button.active {
+    background: @wb-act-bg;
+    color: @wb-act-fg;
+    margin-left: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+}   
+
+#window {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.modules-center {
+	background: @main-bg;
+	padding-left: 4px;
+	padding-right: 4px;
+	border-right: 1px solid #ffffff;
+	border-bottom: 1px solid #ffffff;
+	border-left: 1px solid #ffffff;	
+	border-radius: 0px 0px 5px 5px;
+}
+
+.modules-left {
+  background: @main-bg;
+  padding-left: 10px;
+  border-bottom: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  border-radius: 0px 0px 5px 0px;
+}
+.modules-right {
+  background: @main-bg;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-bottom: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  border-radius: 0px 0px 0px 5px;
+}
