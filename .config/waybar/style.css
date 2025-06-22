@@ -10,9 +10,19 @@
 
 @import "theme.css";
 
+#window {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
 window#waybar {
     background: @bar-bg;
 }
+
+window#waybar.empty #window {
+    background: transparent;
+}
+
 
 tooltip {
     background: @main-bg;
@@ -36,11 +46,6 @@ tooltip {
     padding-left: 3px;
     padding-right: 3px;
 }   
-
-#window {
-  padding-left: 4px;
-  padding-right: 4px;
-}
 
 .modules-center {
 	background: @main-bg;
