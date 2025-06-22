@@ -4,28 +4,26 @@
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 28, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
+	"hyprland/workspaces",
+	"hyprland/window",
         "temperature",
 	"cpu",
-	"hyprland/workspaces"
     ],
     "modules-center": [ 
-	"hyprland/window"
+        "clock",
     ],
     "modules-right": [
         "network",
-        "power-profiles-daemon",
-	"pulseaudio",
-        "backlight",
         "battery",
-        "battery#bat2",
-        "clock",
+	"pulseaudio",
         "tray",
         "custom/power"
     ],
+
     // Modules configuration
+
     "hyprland/window": {
     "format": "{initialClass} {title}",
       "separate-outputs": true,
@@ -37,22 +35,11 @@
       },
 	"max-length": 50
     },
-    // "sway/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "warp-on-scroll": false,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
+    "hyprland/workspaces": {
+	"persistent-workspaces": {
+             "*": 5, 
+       }
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -108,12 +95,12 @@
     "tray": {
         "spacing": 10,
          },
-    "clock": {
-	"format": "{:%Y-%m-%d %H:%M}  ",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
-    },
-    "cpu": {
+  "clock": {
+    "format": "{:%I:%M %p ☲ %a %d/%m}",
+    "tooltip": true,
+    "tooltip-format": "<tt>{calendar}</tt>"
+  },
+  "cpu": {
         "format": "{usage}% ",
         "tooltip": false
     },
@@ -180,11 +167,11 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
+        "format": "{icon} {volume}% {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
+        "format-source": " {volume}%",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
@@ -210,7 +197,7 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/power": {
-        "format" : "⏻ ",
+        "format" : "⏻",
 		"tooltip": false,
 		"menu": "on-click",
 		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder

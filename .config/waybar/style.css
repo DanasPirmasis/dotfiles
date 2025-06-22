@@ -1,3 +1,5 @@
+@import "theme.css";
+
 * {
     border: none;
     border-radius: 0px;
@@ -5,24 +7,9 @@
     font-weight: bold;
     font-size: 10px;
     min-height: 10px;
-    color: #ffffff;
+    /* color: #cdd6f4; */
+    background-color: transparent;
 }
-
-@import "theme.css";
-
-#window {
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-window#waybar {
-    background: @bar-bg;
-}
-
-window#waybar.empty #window {
-    background: transparent;
-}
-
 
 tooltip {
     background: @main-bg;
@@ -32,43 +19,112 @@ tooltip {
 }
 
 #workspaces {
- margin-left: 10px;
+	background: @main-bg;
+  margin: 0;
+  margin-left: 3px;
+  padding: 0;
+  font-weight: bold;
+  font-style: normal;
+  opacity: 1;
+  font-size: 20px;
+  border-radius: 6px 0px 0px 6px;
 }
 
 #workspaces button {
-    padding: 0px;
+  padding: 0px 5px;
+  margin: 3px;
+  border-radius: 6px;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
 }
 
 #workspaces button.active {
-    background: @wb-act-bg;
-    color: @wb-act-fg;
-    margin-left: 3px;
-    padding-left: 3px;
-    padding-right: 3px;
-}   
-
-.modules-center {
-	background: @main-bg;
-	padding-left: 4px;
-	padding-right: 4px;
-	border-right: 1px solid #ffffff;
-	border-bottom: 1px solid #ffffff;
-	border-left: 1px solid #ffffff;	
-	border-radius: 0px 0px 5px 5px;
+  color: #1e1e2e;
+  background: #cba6f7;
+  min-width: 20px;
+  opacity: 1;
 }
 
-.modules-left {
-  background: @main-bg;
-  padding-left: 10px;
-  border-bottom: 1px solid #ffffff;
-  border-right: 1px solid #ffffff;
-  border-radius: 0px 0px 5px 0px;
+#workspaces button.empty {
+ color: #ffffff;
+ opacity: 0.4;
 }
-.modules-right {
+
+#workspaces button:nth-child(1):not(.active) {
+  color: #f38ba8;
+}
+#workspaces button:nth-child(2):not(.active) {
+  color: #f9e2af;
+}
+#workspaces button:nth-child(3):not(.active) {
+  color: #a6e3a1;
+}
+
+window#waybar {
+  padding: 2px;
+}
+
+#window {
+ color: #a6da95;
   background: @main-bg;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-bottom: 1px solid #ffffff;
-  border-left: 1px solid #ffffff;
-  border-radius: 0px 0px 0px 5px;
+  padding: 6px;
+  border-radius: 0px 6px 6px 0px;
+  margin: 0px 0px;
+}
+
+#temperature {
+  padding: 0px 12px;
+  margin-left: 2px;
+  color: #ed8796;
+  background: @main-bg;
+  border-radius: 6px;
+}
+
+#cpu{
+  padding: 0px 12px;
+  margin-left: 2px;
+  color: #8aadf4;
+  background: @main-bg;
+  border-radius: 6px;
+}
+
+#clock{
+  padding: 0px 12px;
+  margin-left: 2px;
+  color: #cad3f5;
+  background: @main-bg;
+  border-radius: 6px;
+}
+
+#network{
+  padding: 0px 12px;
+  margin-right: 2px;
+  color: #c6a0f6;
+  background: @main-bg;
+  border-radius: 6px;
+}
+
+#battery{
+  padding: 0px 12px;
+  margin-right: 2px;
+  color: #f5a97f;
+  background: @main-bg;
+  border-radius: 6px;
+}
+
+#pulseaudio{
+  padding: 0px 12px;
+  margin-right: 2px;
+  color: #eed49f;
+  background: @main-bg;
+  border-radius: 6px;
+}
+
+#custom-power {
+   padding: 0px 12px;
+  margin-right: 2px;
+  color: #FF0000;
+  background: @main-bg;
+  border-radius: 6px;
 }
