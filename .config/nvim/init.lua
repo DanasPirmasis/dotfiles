@@ -1,4 +1,4 @@
 require("config.lazy")
+require("config.keymaps")
+require("config.options")
 require("kitty-config")
-vim.opt.clipboard = "unnamedplus"
-vim.g.mapleader = ' '
