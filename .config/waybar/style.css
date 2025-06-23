@@ -19,7 +19,7 @@ tooltip {
 }
 
 #workspaces {
-	background: @main-bg;
+  background: @main-bg;
   margin: 0;
   margin-left: 3px;
   padding: 0;
@@ -47,7 +47,6 @@ tooltip {
 }
 
 #workspaces button.empty {
- color: #ffffff;
  opacity: 0.4;
 }
 
@@ -59,6 +58,9 @@ tooltip {
 }
 #workspaces button:nth-child(3):not(.active) {
   color: #a6e3a1;
+}
+#workspaces button:nth-child(n + 4):not(.active) {
+  color: #cad3f5;
 }
 
 window#waybar {
