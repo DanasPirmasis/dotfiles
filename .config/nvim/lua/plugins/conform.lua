@@ -8,7 +8,6 @@ return {
 		},
 		formatters_by_ft = {
 			lua = { "stylua" },
-			rust = { "rustfmt", lsp_format = "fallback" },
 			go = { "goimports", "golines", "gofmt" },
 			javascript = { "prettier", stop_after_first = true },
 			typescript = { "prettier" },
