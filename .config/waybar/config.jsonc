@@ -21,7 +21,7 @@
     "bluetooth",
     "pulseaudio",
     "tray",
-    "custom/power",
+    "custom/powermenu",
   ],
 
   // Modules configuration
@@ -162,13 +162,11 @@
     },
   },
   "network": {
-    // "interface": "wlp2*", // (Optional) To force the use of this interface
-    "format": "{ifname}",
     "format-wifi": "{icon}",
-    "tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
-    "format-disconnected": "Disconnected ⚠",
-    "format-alt": "{ipaddr}  {bandwidthUpBits}  {bandwidthDownBits}",
+    "format-ethernet": " ",
+    "format-disconnected": "󰤭 ",
     "format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "],
+    "on-click": "sh ~/.config/wofi/scripts/wifimenu.sh '-s'",
   },
   "bluetooth": {
     "format": "{icon}",
@@ -216,16 +214,9 @@
     "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null", // Script in resources folder
     // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
   },
-  "custom/power": {
-    "format": "⏻",
+  "custom/powermenu": {
+    "format": "",
+    "on-click": "pkill wofi || sh ~/.config/wofi/scripts/powermenu.sh",
     "tooltip": false,
-    "menu": "on-click",
-    "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-    "menu-actions": {
-      "shutdown": "shutdown",
-      "reboot": "reboot",
-      "suspend": "systemctl suspend",
-      "hibernate": "systemctl hibernate",
-    },
   },
 }
