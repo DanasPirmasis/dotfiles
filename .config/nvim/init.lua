@@ -1,5 +1,7 @@
-require("config.lazy")
-require("config.keymaps")
 require("config.options")
+require("core.lazy")
+require("core.lsp")
+require("config.keymaps")
+require("config.autocmds")
 require("kitty-config")
-
+vim.deprecate = function() end
