@@ -84,11 +84,26 @@ window#waybar {
 }
 
 #cpu{
-  padding: 0px 12px;
+padding: 0px 8px 0px 15px;
   margin-left: 2px;
-  color: #8aadf4;
+  color: #8bd5ca;
   background: @main-bg;
-  border-radius: 6px;
+  border-radius: 6px 0 0 6px;
+}
+
+#memory {
+  padding: 0px 15px 0px 8px;
+  margin-right: 0px;
+  color: #eed49f;
+  background: @main-bg;
+  border-radius: 0 6px 6px 0;
+}
+
+#memory.warning {
+    color: #f5a97f;}
+
+#memory.critical {
+    color: #ed8796;
 }
 
 #clock{
@@ -124,9 +139,17 @@ window#waybar {
 }
 
 #custom-power {
-   padding: 0px 12px;
+  padding: 0px 12px;
   margin-right: 2px;
   color: #FF0000;
+  background: @main-bg;
+  border-radius: 6px;
+}
+
+#bluetooth {
+  padding: 0px 12px;
+  margin-right: 2px;
+  color: #8aadf4;
   background: @main-bg;
   border-radius: 6px;
 }
