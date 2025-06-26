@@ -20,7 +20,7 @@
     "battery",
     "bluetooth",
     "pulseaudio",
-    "tray",
+    // "tray",
     "custom/powermenu",
   ],
 
@@ -166,7 +166,7 @@
     "format-ethernet": " ",
     "format-disconnected": "󰤭 ",
     "format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "],
-    "on-click": "sh ~/.config/wofi/scripts/wifimenu.sh '-s'",
+    "on-click": "nm-connection-editor",
   },
   "bluetooth": {
     "format": "{icon}",
