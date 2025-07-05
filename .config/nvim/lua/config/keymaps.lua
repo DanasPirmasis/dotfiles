@@ -36,6 +36,11 @@ keymap("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" })
 -- P puts text before the cursor.
 vim.keymap.set("n", "YY", "va{Vy", opts)
 
+vim.keymap.set("n", "gK", function()
+	local new_config = not vim.diagnostic.config().virtual_lines
+	vim.diagnostic.config({ virtual_lines = new_config })
+end, { desc = "Toggle diagnostic virtual_lines" })
+
 --
 -- TypeScript console.log
 vim.keymap.set("n", "<leader>cl", function()

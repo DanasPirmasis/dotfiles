@@ -38,7 +38,7 @@
   },
   "hyprland/workspaces": {
     "persistent-workspaces": {
-      "*": 5,
+      "*": 3,
     },
   },
   "keyboard-state": {
