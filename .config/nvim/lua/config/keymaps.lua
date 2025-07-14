@@ -8,14 +8,6 @@ keymap("n", "<leader>fs", telescope.live_grep, { desc = "Telescope live grep" })
 keymap("n", "<leader>fb", telescope.buffers, { desc = "Telescope buffers" })
 keymap("n", "<leader>fh", telescope.help_tags, { desc = "Telescope help tags" })
 
-keymap("n", "<leader>e", ":Telescope file_browser<CR>", { desc = "File browser" })
-keymap(
-	"n",
-	"<leader>E",
-	":Telescope file_browser path=%:p:h select_buffer=true<CR>",
-	{ desc = "File browser (current dir)" }
-)
-
 keymap("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
 keymap("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
 keymap("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
