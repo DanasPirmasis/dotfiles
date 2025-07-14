@@ -1,0 +1,32 @@
+output "Chimei Innolux Corporation 0x14D5 Unknown" {
+  mode 1920x1080@60
+  position 0,0
+  scale 1.5
+  alias $LAPTOP
+}
+
+output "LG Electronics LG ULTRAGEAR 406NTNH3L167" {
+  mode  2560x1440@143.99
+  position 1280,0
+  scale 1.6
+  alias $MAIN
+}
+
+output "AOC 24G2W1G4 0x0000CC8F" {
+  mode  1920x1080@120
+  position 2880,0
+  scale 1.333333
+  alias $SECOND
+}
+
+profile home_1 {
+  output $LAPTOP disable
+  output $MAIN enable
+  output $SECOND enable
+}
+
+profile solo {
+  output $LAPTOP enable
+  output $MAIN disable 
+  output $SECOND disable
+}
