@@ -15,3 +15,5 @@
 
 - Remove the on-hover property
 - Change how errors are displayed
+- Fix tab moving cursor to location where it was typed previously
+- Add default Mason installs or at least a script to install stuff like `tailwindcss-language-server` and `typescript-language-server`
