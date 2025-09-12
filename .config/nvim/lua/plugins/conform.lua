@@ -5,30 +5,35 @@ return {
 		{
 			"<leader>cf",
 			function()
-				require("conform").format({ async = true }, function(err, did_edit)
-					if not err and did_edit then
-						vim.notify("Code formatted", vim.log.levels.INFO, { title = "Conform" })
-					end
-				end)
+				require("conform").format({ async = true, timeout_ms = 10000 })
 			end,
 			mode = { "n", "v" },
-			desc = "Format buffer",
+			desc = "Code Format",
 		},
 	},
 	opts = {
+		formatters = {
+			prettier = {
+				require_cwd = true,
+				config_command = "--config",
+				config_path = ".prettier.config.js",
+			},
+		},
 		format_on_save = {
-			timeout_ms = 500,
-			lsp_fallback = true,
-			lsp_format = "fallback",
+			timeout_ms = 1000,
+			lsp_fallback = false,
 		},
 		formatters_by_ft = {
 			lua = { "stylua" },
 			go = { "goimports", "golines", "gofmt" },
-			javascript = { "prettier", stop_after_first = true },
+			javascript = { "prettier" },
 			typescript = { "prettier" },
+			javascriptreact = { "prettier" },
+			typescriptreact = { "prettier" },
 			json = { "prettier" },
 			jsonc = { "prettier" },
 		},
+		notify_on_error = true,
 		init = function()
 			vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
 		end,

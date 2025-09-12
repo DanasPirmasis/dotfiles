@@ -3,6 +3,7 @@ vim.lsp.enable({
   "lua_ls",
   "ts-ls",
   "tailwindcss",
+  "oxlint"
 })
 
 vim.diagnostic.config({
