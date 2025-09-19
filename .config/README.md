@@ -1,5 +1,21 @@
 # Dotfiles
 
+# Prerequisites
+
+External dependencies to install:
+
+- fd
+- ripgrep
+- luarocks
+
+Install these through Mason, because I've yet to setup auto-installing
+- oxlint
+- typescript-language-server
+- stylua
+- lua-language-server
+- tailwindcss-language-server
+
+
 ## TODO:
 
 ### Neovim
