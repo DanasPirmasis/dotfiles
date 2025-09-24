@@ -2,6 +2,8 @@
 
 # Prerequisites
 
+Node.js
+
 External dependencies to install:
 
 - fd
