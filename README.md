@@ -1,19 +1,25 @@
-# Dotfiles repo
+# Dotfiles
+
+# Prerequisites
+
+Node.js
+
+External dependencies to install:
+
+- fd
+- ripgrep
+- luarocks
+
+Install these through Mason, because I've yet to setup auto-installing
+- oxlint
+- typescript-language-server
+- stylua
+- lua-language-server
+- tailwindcss-language-server
+
 
 ## TODO:
 
-### Hyprland
-
-- Add keybinds for brightness control and music control
-- Change network UI
-- Waybar battery module should change power settings
-- Add hypridle
-- Customize hyprlock
-- Customize gddm
-
 ### Neovim
 
-- Remove the on-hover property
-- Change how errors are displayed
-- Fix tab moving cursor to location where it was typed previously
-- Add default Mason installs or at least a script to install stuff like `tailwindcss-language-server` and `typescript-language-server`
+- There is an issue where <leader>cf fails to format JSX correctly, but when fortmatting on save it succeeds.
