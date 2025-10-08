@@ -27,34 +27,33 @@ keymap("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" })
 -- p puts text after the cursor,
 -- P puts text before the cursor.
 vim.keymap.set("n", "YY", "va{Vy", opts)
-vim.keymap.set("n", "gK", function()
-  local new_config = not vim.diagnostic.config().virtual_lines
-  vim.diagnostic.config({ virtual_lines = new_config })
-end, { desc = "Toggle diagnostic virtual_lines" })
+vim.keymap.set("n", "<leader>xx", function()
+	vim.diagnostic.open_float()
+end, { desc = "Show diagnostic bubble for current line" })
 
 --
 -- TypeScript console.log
 vim.keymap.set("n", "<leader>cl", function()
-  local word = vim.fn.expand("<cword>")
-  local line_num = vim.fn.line(".")
-  local new_line = string.format('console.log("%s:", %s)', word, word)
+	local word = vim.fn.expand("<cword>")
+	local line_num = vim.fn.line(".")
+	local new_line = string.format('console.log("%s:", %s)', word, word)
 
-  -- Add console.log on line below
-  vim.fn.append(line_num, new_line)
+	-- Add console.log on line below
+	vim.fn.append(line_num, new_line)
 end, { desc = "Add console.log for word under cursor" })
 
 -- For visual selection
 vim.keymap.set("v", "<leader>cl", function()
-  local start_pos = vim.fn.getpos("'<")
-  local end_pos = vim.fn.getpos("'>")
+	local start_pos = vim.fn.getpos("'<")
+	local end_pos = vim.fn.getpos("'>")
 
-  -- Only handle single line selections
-  if start_pos[2] == end_pos[2] then
-    local line = vim.fn.getline(start_pos[2])
-    if line and line ~= "" then
-      local selected = line:sub(start_pos[3], end_pos[3])
-      local new_line = string.format('console.log("%s:", %s)', selected, selected)
-      vim.fn.append(start_pos[2], new_line)
-    end
-  end
+	-- Only handle single line selections
+	if start_pos[2] == end_pos[2] then
+		local line = vim.fn.getline(start_pos[2])
+		if line and line ~= "" then
+			local selected = line:sub(start_pos[3], end_pos[3])
+			local new_line = string.format('console.log("%s:", %s)', selected, selected)
+			vim.fn.append(start_pos[2], new_line)
+		end
+	end
 end, { desc = "Add console.log for selection" })
