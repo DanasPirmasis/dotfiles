@@ -22,4 +22,5 @@ Install these through Mason, because I've yet to setup auto-installing
 
 ### Neovim
 
-- There is an issue where <leader>cf fails to format JSX correctly, but when fortmatting on save it succeeds.
+- There is an issue where <leader>cf fails to format JSX correctly, but when formatting on save it succeeds.
+- Get rid of conform and use something else for formatting
