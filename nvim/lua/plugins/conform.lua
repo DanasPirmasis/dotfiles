@@ -5,7 +5,7 @@ return {
 		{
 			"<leader>cf",
 			function()
-				require("conform").format({ async = true, timeout_ms = 10000 })
+				require("conform").format({ async = false, timeout_ms = 10000, quiet = false, lsp_fallback = "never" })
 			end,
 			mode = { "n", "v" },
 			desc = "Code Format",
@@ -14,7 +14,7 @@ return {
 	opts = {
 		formatters = {
 			prettier = {
-				require_cwd = true,
+				require_cwd = false,
 				config_command = "--config",
 				config_path = ".prettier.config.js",
 			},
@@ -32,8 +32,10 @@ return {
 			typescriptreact = { "prettier" },
 			json = { "prettier" },
 			jsonc = { "prettier" },
+			css = { "prettier" },
 		},
 		notify_on_error = true,
+		log_level = vim.log.levels.DEBUG,
 		init = function()
 			vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
 		end,
