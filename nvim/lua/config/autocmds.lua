@@ -12,8 +12,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		map("K", vim.lsp.buf.hover, "Hover Documentation")
 		map("gs", vim.lsp.buf.signature_help, "Signature Documentation")
 		map("gD", vim.lsp.buf.declaration, "Goto Declaration")
-		map("gi", vim.lsp.buf.implementation, "Goto implementation")
-		-- map("gi", "<cmd>Telescope lsp_implementations<CR>", "Goto Declaration")
+		-- map("gi", vim.lsp.buf.implementation, "Goto implementation")
+		map("gi", "<cmd>Telescope lsp_implementations<CR>", "Goto Declaration")
 		map("gd", "<cmd>Telescope lsp_definitions<CR>", "Go to definitions")
 
 		local wk = require("which-key")
