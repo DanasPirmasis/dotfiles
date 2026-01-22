@@ -20,7 +20,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		wk.add({
 			{ "<leader>ca", vim.lsp.buf.code_action, desc = "Code Action" },
 			{ "<leader>cA", vim.lsp.buf.range_code_action, desc = "Range Code Actions" },
-			{ "<leader>cf", vim.lsp.buf.format, desc = "Format" },
 			{ "<leader>rn", vim.lsp.buf.rename, desc = "Rename all references" },
 			{ "<leader>Wa", vim.lsp.buf.add_workspace_folder, desc = "Workspace Add Folder" },
 			{ "<leader>Wr", vim.lsp.buf.remove_workspace_folder, desc = "Workspace Remove Folder" },
