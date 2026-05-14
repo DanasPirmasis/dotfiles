@@ -1,21 +1,21 @@
 @import "theme.css";
 
 * {
-    border: none;
-    border-radius: 0px;
-    font-family: "JetBrainsMono Nerd Font";
-    font-weight: bold;
-    font-size: 10px;
-    min-height: 10px;
-    /* color: #cdd6f4; */
-    background-color: transparent;
+  border: none;
+  border-radius: 0px;
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: bold;
+  font-size: 10px;
+  min-height: 10px;
+  /* color: #cdd6f4; */
+  background-color: transparent;
 }
 
 tooltip {
-    background: @main-bg;
-    color: @main-fg;
-    border-radius: 7px;
-    border-width: 0px;
+  background: @main-bg;
+  color: @main-fg;
+  border-radius: 7px;
+  border-width: 0px;
 }
 
 #workspaces {
@@ -47,7 +47,7 @@ tooltip {
 }
 
 #workspaces button.empty {
- opacity: 0.4;
+  opacity: 0.4;
 }
 
 #workspaces button:nth-child(1):not(.active) {
@@ -68,7 +68,7 @@ window#waybar {
 }
 
 #window {
- color: #a6da95;
+  color: #a6da95;
   background: @main-bg;
   padding: 6px;
   border-radius: 0px 6px 6px 0px;
@@ -83,8 +83,8 @@ window#waybar {
   border-radius: 6px;
 }
 
-#cpu{
-padding: 0px 8px 0px 15px;
+#cpu {
+  padding: 0px 8px 0px 15px;
   margin-left: 2px;
   color: #8bd5ca;
   background: @main-bg;
@@ -100,13 +100,14 @@ padding: 0px 8px 0px 15px;
 }
 
 #memory.warning {
-    color: #f5a97f;}
-
-#memory.critical {
-    color: #ed8796;
+  color: #f5a97f;
 }
 
-#clock{
+#memory.critical {
+  color: #ed8796;
+}
+
+#clock {
   padding: 0px 12px;
   margin-left: 2px;
   color: #cad3f5;
@@ -114,7 +115,7 @@ padding: 0px 8px 0px 15px;
   border-radius: 6px;
 }
 
-#network{
+#network {
   padding: 0px 12px;
   margin-right: 2px;
   color: #c6a0f6;
@@ -122,7 +123,7 @@ padding: 0px 8px 0px 15px;
   border-radius: 6px;
 }
 
-#battery{
+#battery {
   padding: 0px 12px;
   margin-right: 2px;
   color: #f5a97f;
@@ -130,7 +131,7 @@ padding: 0px 8px 0px 15px;
   border-radius: 6px;
 }
 
-#pulseaudio{
+#pulseaudio {
   padding: 0px 12px;
   margin-right: 2px;
   color: #eed49f;
@@ -141,7 +142,7 @@ padding: 0px 8px 0px 15px;
 #custom-powermenu {
   padding: 0px 12px;
   margin-right: 2px;
-  color: #FF0000;
+  color: #ff0000;
   background: @main-bg;
   border-radius: 6px;
 }

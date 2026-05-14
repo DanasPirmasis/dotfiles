@@ -4,6 +4,7 @@ vim.lsp.enable({
 	"ts-ls",
 	"tailwindcss",
 	"oxlint",
+  "biome",
 })
 
 vim.diagnostic.config({

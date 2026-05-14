@@ -1,0 +1,95 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // Pane navigation
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+    },
+  },
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      // Pane splits
+      "space s v": "pane::SplitRight",
+      "space s h": "pane::SplitDown",
+      "space s x": "pane::CloseActiveItem",
+
+      // Tab navigation
+      "ctrl-tab": "pane::ActivateNextItem",
+      "ctrl-shift-tab": "pane::ActivatePreviousItem",
+      "space 1": ["pane::ActivateItem", 0],
+      "space 2": ["pane::ActivateItem", 1],
+      "space 3": ["pane::ActivateItem", 2],
+      "space 4": ["pane::ActivateItem", 3],
+      "space 5": ["pane::ActivateItem", 4],
+      "space 6": ["pane::ActivateItem", 5],
+      "space 7": ["pane::ActivateItem", 6],
+      "space 8": ["pane::ActivateItem", 7],
+      "space 9": ["pane::ActivateItem", 8],
+
+      // File finder
+      "space f f": "file_finder::Toggle",
+      "space f s": "workspace::NewSearch",
+
+      // File tree
+      "space e e": "project_panel::Toggle",
+      "space e f": "project_panel::RevealInFileManager",
+
+      // Terminal
+      "space t t": "terminal_panel::Toggle",
+      // AI agent
+      "space a a": "agent::Toggle",
+
+      // Code actions
+      "space c f": "editor::Format",
+      "space r n": "editor::Rename",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == visual",
+    "bindings": {
+      "ctrl-up": "editor::SelectLargerSyntaxNode",
+      "ctrl-down": "editor::SelectSmallerSyntaxNode",
+    },
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "space e e": "project_panel::Toggle",
+    },
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "space t t": "terminal_panel::Toggle",
+    },
+  },
+  {
+    "context": "Agent",
+    "bindings": {
+      "space a a": "agent::Toggle",
+    },
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-tab": "tab_switcher::Toggle",
+      "ctrl-shift-tab": [
+        "tab_switcher::Toggle",
+        {
+          "select_last": true,
+        },
+      ],
+    },
+  },
+]

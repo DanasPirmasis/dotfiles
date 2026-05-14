@@ -59,7 +59,7 @@ return {
 						auto_show_delay_ms = 500,
 					},
 					list = {
-						max_items = 10,
+						max_items = 100,
 					},
 				},
 			})

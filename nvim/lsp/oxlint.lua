@@ -23,7 +23,7 @@ return {
     'typescript.tsx',
   },
   workspace_required = true,
-  root_markers = { '.oxlintrc.json' }
+  root_markers = { '.oxlintrc.json' },
   -- root_dir = function(bufnr, on_dir)
   --   local fname = vim.api.nvim_buf_get_name(bufnr)
   --   local root_markers = util.insert_package_json({ '.oxlintrc.json' }, 'oxlint', fname)

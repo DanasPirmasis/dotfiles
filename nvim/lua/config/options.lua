@@ -7,6 +7,7 @@ vim.opt.termguicolors = true
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+opt.syntax = "on"
 opt.relativenumber = true
 opt.number = true
 
