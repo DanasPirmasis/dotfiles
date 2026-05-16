@@ -18,21 +18,6 @@
       // Tab navigation
       "ctrl-tab": "pane::ActivateNextItem",
       "ctrl-shift-tab": "pane::ActivatePreviousItem",
-
-      // File finder
-      "space f f": "file_finder::Toggle",
-      "space f s": "workspace::NewSearch",
-
-      // File tree
-      "space e e": "project_panel::Toggle",
-      "space e f": "project_panel::RevealInFileManager",
-
-      // Terminal
-      "space t t": "terminal_panel::Toggle",
-      // AI agent
-      "space a a": "agent::Toggle",
-      // Git Panel
-      "space l g": "git_panel::Toggle",
     },
   },
   {
@@ -94,7 +79,7 @@
     },
   },
   {
-    "context": "Agent",
+    "context": "Agent && vim_mode == normal",
     "bindings": {
       "space a a": "agent::Toggle",
     },
